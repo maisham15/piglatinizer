@@ -6,10 +6,23 @@
 
 // Document Ready Function. All of your jQuery should go in here. 
 $( document ).ready(function() {
+  function wordToPigLatin(word) {
+    return word + "ay";
+  }
+
+  $("#button").click(function() {
+    var text = $("#input").val();
+    sentenceToPigLatin(text);
+    var pigLatinizedText = wordToPigLatin(text);
+    $("#result").append(pigLatinizedText);
+  });
   
-
-
-
+  function sentenceToPigLatin(sentence){
+  	console.log(sentence.split(" "));
+  	return sentence.split(" ");
+  }
+  
+  
 });
 
 
